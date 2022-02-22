@@ -1,6 +1,5 @@
 const Sequelize = require('sequelize');
-const mysql2 = require('mysql2');
-const express = require('express');
+
 require('dotenv').config();
 
 // Create connection to database

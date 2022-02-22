@@ -1,6 +1,6 @@
-const Post = require('../models');
+const { Library } = require('../models');
 
-const PostData = [
+const librarydata = [
     {
         title: 'Old Fashioned', 
         ingredients: 'Whiskey, sugar, bitters, orange twist, cocktail cherry',
@@ -52,3 +52,7 @@ const PostData = [
         description: 'Dates back to World War I'
     }
 ]
+
+const seedLibraries = () => Library.bulkCreate(librarydata);
+
+module.exports = seedLibraries;
