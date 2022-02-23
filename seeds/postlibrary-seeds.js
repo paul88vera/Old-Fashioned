@@ -1,4 +1,4 @@
-const Post = require('../models');
+const { User, Post } = require('../models');
 
 const postdata = [
     {
@@ -53,6 +53,6 @@ const postdata = [
     }
 ]
 
-const seedLibrary = () => Post.bulkCreate(postdata, {individualHooks: true});
+const seedLibrary = () => Post.bulkCreate(postdata);
 
 module.exports = seedLibrary;
