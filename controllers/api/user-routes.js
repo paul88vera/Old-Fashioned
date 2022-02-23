@@ -1,5 +1,4 @@
 const router = require('express').Router(); 
-const { UnknownConstraintError } = require('sequelize/types');
 const { User } = require('../../models');
 
 // GET api/users
