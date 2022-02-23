@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS library_db;
+DROP DATABASE IF EXISTS oldfashioned_db;
 
-CREATE DATABASE library_db;
+CREATE DATABASE oldfashioned_db;
