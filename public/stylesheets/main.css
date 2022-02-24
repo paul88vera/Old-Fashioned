@@ -1,3 +1,17 @@
+body {
+            background-image: url('https://images.pexels.com/photos/5490965/pexels-photo-5490965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-color: #140d07;
+        }
+
+header{
+    background-color: #140d07;
+    width: 100%;
+    height: auto;
+    z-index: 900px;
+}
+
 .nav {
     background-color: #140d07;
     background: #140d07;
@@ -5,24 +19,29 @@
     color: #ece9d7;
     border: 2px;
     border-color: #ece9d7;
-    position: absolute;
-    width: 1920px;
-    height: 104px;
-    margin: 0;
+    /* width: 100%; */
+    /* height: auto; */
+    /* margin: 0; */
     font-size: 30px;
-    position: fixed !important; 
-    top: 0px; 
+    /* position: fixed !important; */
+    /* top: 0px;  */
     padding: 0px; margin: 0px;
     text-decoration: none !important;
+    letter-spacing: 0.135em;
+    text-align: center;
+    justify-content: center;
 }
 
-.Old-Fashioned {
+.Old-Fashioned, a:hover, a:active {
+    color: inherit;
     color: #ece9d7;
     font-family: 'Roboto', sans-serif;
     position: absolute;
     left: 50%;
     transform: translatex(-50%);
     padding: 25px;
+    text-decoration: none;
+    letter-spacing: 0.135em;
 }
 
 .modal-title {
@@ -30,12 +49,15 @@
     background-color: #140d07;
     background: #140d07;
     border-color: #ece9d7;
+    letter-spacing: 0.135em;
+    color: #ece9d7;
 }
 
 .modal-body {
     background-color: #140d07;
     background: #140d07;
     border-color: #140d07;
+    letter-spacing: 0.135em;
 }
 
 .modal-footer {
@@ -43,6 +65,7 @@
     background: #140d07;
     border-color: #140d07;
     justify-content: center;
+    letter-spacing: 0.135em;
 }
 
 .btn {
@@ -54,6 +77,7 @@
     border-color: #ece9d7;
     border-radius: 0px;
     font-size: 20px;
+    letter-spacing: 0.135em;
 }
 
 .createBtn {
@@ -65,6 +89,7 @@
     border-color: #ece9d7;
     border-radius: 0px;
     font-size: 20px;
+    letter-spacing: 0.135em;
 }
 
 
@@ -74,6 +99,7 @@
     transition: transform 150ms;
     transform: scale(1.03);
     color: #ece9d7;
+    letter-spacing: 0.135em;
 }
 
 .createBtn:hover {
@@ -82,26 +108,34 @@
     transition: transform 150ms;
     transform: scale(1.03);
     color: #ece9d7;
+    letter-spacing: 0.135em;
 }
 
 .modal-header {
     background: #140d07;
     color: #ece9d7;
-    text-align: center !important;
-    justify-content: center !important;
+    letter-spacing: 0.135em;
 }
 
 .modal-dialog{ 
-    text-align: center !important;
-    justify-content: center !important;
+    letter-spacing: 0.135em;
 }
 
-.model-content{
+.modal-content{
     text-align: center !important;
-    justify-content: center !important;
+    letter-spacing: 0.135em;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
 }
 
 .container{
-    text-align: center !important;
-    justify-content: center !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 0.135em;
+    padding: 2em;
+    background-color: #140d07; 
 }

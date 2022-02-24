@@ -1,3 +1,10 @@
+body {
+            background-image: url('https://images.pexels.com/photos/5490965/pexels-photo-5490965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-color: #140d07;
+        }
+
 .nav {
     background-color: #140d07;
     background: #140d07;
@@ -13,6 +20,7 @@
     position: fixed !important; 
     top: 0px; 
     padding: 0px; margin: 0px;
+    letter-spacing: 0.135em;
 }
 
 
@@ -22,6 +30,7 @@
     font-family: 'Roboto', sans-serif;
     padding: 25px;
     text-decoration: none;
+    letter-spacing: 0.135em;
 }
 
 .btn {
@@ -31,6 +40,7 @@
     height: 50px;
     color: #ece9d7;
     font-size: 20px;
+    letter-spacing: 0.135em;
 }
 
 .btn:hover {
@@ -38,6 +48,7 @@
     transition: transform 150ms;
     transform: scale(1.03);
     color: #ece9d7;
+    letter-spacing: 0.135em;
 }
 
 .submitBtn {
@@ -49,6 +60,7 @@
     border-color: #ece9d7;
     border-radius: 0px;
     font-size: 20px;
+    letter-spacing: 0.135em;
 }
 
 .modal-footer {
@@ -56,23 +68,27 @@
     background: #140d07;
     border-color: #140d07;
     justify-content: center;
+    letter-spacing: 0.135em;
 }
 
 .modal-title {
     background-color: #140d07;
     background: #140d07;
     border-color: #ece9d7;
+    letter-spacing: 0.135em;
 }
 
 .modal-body {
     background-color: #140d07;
     background: #140d07;
     border-color: #140d07;
+    letter-spacing: 0.135em;
 }
 
 .modal-header {
     background: #140d07;
     color: #ece9d7;
+    letter-spacing: 0.135em;
 }
 
 .submitBtn:hover {
@@ -81,4 +97,13 @@
     transition: transform 150ms;
     transform: scale(1.03);
     color: #ece9d7;
+    letter-spacing: 0.135em;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 0.135em;
 }
