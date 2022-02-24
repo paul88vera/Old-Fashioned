@@ -26,6 +26,7 @@
 }
 
 .modal-title {
+    text-align: center;
     background-color: #140d07;
     background: #140d07;
     border-color: #ece9d7;
@@ -86,4 +87,21 @@
 .modal-header {
     background: #140d07;
     color: #ece9d7;
+    text-align: center !important;
+    justify-content: center !important;
+}
+
+.modal-dialog{ 
+    text-align: center !important;
+    justify-content: center !important;
+}
+
+.model-content{
+    text-align: center !important;
+    justify-content: center !important;
+}
+
+.container{
+    text-align: center !important;
+    justify-content: center !important;
 }
