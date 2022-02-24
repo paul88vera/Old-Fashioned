@@ -21,6 +21,8 @@ body {
     top: 0px; 
     padding: 0px; margin: 0px;
     letter-spacing: 0.135em;
+    justify-content: space-between;
+    align-items: center;
 }
 
 

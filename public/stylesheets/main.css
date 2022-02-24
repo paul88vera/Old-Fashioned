@@ -25,6 +25,9 @@ header{
     color: #ece9d7;
     border: 2px;
     border-color: #ece9d7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .Old-Fashioned, a:hover, a:active {
