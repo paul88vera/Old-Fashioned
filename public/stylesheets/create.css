@@ -13,16 +13,49 @@
     position: fixed !important; 
     top: 0px; 
     padding: 0px; margin: 0px;
-    text-decoration: none !important;
 }
 
-.Old-Fashioned {
+
+.Old-Fashioned, a:hover, a:active {
+    color: inherit;
     color: #ece9d7;
     font-family: 'Roboto', sans-serif;
-    position: absolute;
-    left: 50%;
-    transform: translatex(-50%);
     padding: 25px;
+    text-decoration: none;
+}
+
+.btn {
+    background-color: #140d07;
+    background: #140d07;
+    width: 115px;
+    height: 50px;
+    color: #ece9d7;
+    font-size: 20px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transition: transform 150ms;
+    transform: scale(1.03);
+    color: #ece9d7;
+}
+
+.submitBtn {
+    background-color: #140d07;
+    background: #140d07;
+    width: 380px;
+    height: 49px;
+    color: #ece9d7;
+    border-color: #ece9d7;
+    border-radius: 0px;
+    font-size: 20px;
+}
+
+.modal-footer {
+    background-color: #140d07;
+    background: #140d07;
+    border-color: #140d07;
+    justify-content: center;
 }
 
 .modal-title {
@@ -37,53 +70,15 @@
     border-color: #140d07;
 }
 
-.modal-footer {
-    background-color: #140d07;
-    background: #140d07;
-    border-color: #140d07;
-    justify-content: center;
-}
-
-.btn {
-    background-color: #140d07;
-    background: #140d07;
-    width: 169px;
-    height: 84px;
-    color: #ece9d7;
-    border-color: #ece9d7;
-    border-radius: 0px;
-    font-size: 20px;
-}
-
-.createBtn {
-    background-color: #140d07;
-    background: #140d07;
-    width: 380px;
-    height: 49px;
-    color: #ece9d7;
-    border-color: #ece9d7;
-    border-radius: 0px;
-    font-size: 20px;
-}
-
-
-.btn:hover {
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 #ece9d7;
-    transition: transform 150ms;
-    transform: scale(1.03);
-    color: #ece9d7;
-}
-
-.createBtn:hover {
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 #ece9d7;
-    transition: transform 150ms;
-    transform: scale(1.03);
-    color: #ece9d7;
-}
-
 .modal-header {
     background: #140d07;
+    color: #ece9d7;
+}
+
+.submitBtn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 #ece9d7;
+    transition: transform 150ms;
+    transform: scale(1.03);
     color: #ece9d7;
 }
