@@ -1,6 +1,6 @@
-const Post = require('../models');
+const { User, Post } = require('../models');
 
-const PostData = [
+const postdata = [
     {
         title: 'Old Fashioned', 
         ingredients: 'Whiskey, sugar, bitters, orange twist, cocktail cherry',
@@ -52,3 +52,7 @@ const PostData = [
         description: 'Dates back to World War I'
     }
 ]
+
+const seedLibrary = () => Post.bulkCreate(postdata);
+
+module.exports = seedLibrary;
