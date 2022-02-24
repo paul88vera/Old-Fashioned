@@ -15,21 +15,16 @@ header{
 .nav {
     background-color: #140d07;
     background: #140d07;
-    font-family: 'Roboto', sans-serif;
+    border: 1px solid;
+    text-align: center;
+    padding: 0px 0px;
+    font-size: 30px;
+    width: 300px;
+    height: 109px;
+    letter-spacing: 0.135em;
     color: #ece9d7;
     border: 2px;
     border-color: #ece9d7;
-    /* width: 100%; */
-    /* height: auto; */
-    /* margin: 0; */
-    font-size: 30px;
-    /* position: fixed !important; */
-    /* top: 0px;  */
-    padding: 0px; margin: 0px;
-    text-decoration: none !important;
-    letter-spacing: 0.135em;
-    text-align: center;
-    justify-content: center;
 }
 
 .Old-Fashioned, a:hover, a:active {
