@@ -1,12 +1,12 @@
-const seedUsers= require("./user-seeds");
-const seedLibraries = require("./library-seeds");
+const seedLibrary = require("./postlibrary-seeds");
+const seedUser = require("./user-seeds");
 
 const sequelize = require("../config/connection");
 
 const seedAll = async () => {
     await sequelize.sync({ force: true });
     console.log("=================");
-    await seedUsers();
+    await seedUser();
     console.log("=================");
 
     // await seedLibraries();
