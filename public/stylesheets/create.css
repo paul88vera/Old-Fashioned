@@ -1,9 +1,9 @@
 body {
-            background-image: url('https://images.pexels.com/photos/5490965/pexels-photo-5490965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-            background-size: 100%;
-            background-repeat: no-repeat;
-            background-color: #140d07;
-        }
+    background-image: url('https://images.pexels.com/photos/5490965/pexels-photo-5490965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #140d07;
+}
 
 .nav {
     background-color: #140d07;

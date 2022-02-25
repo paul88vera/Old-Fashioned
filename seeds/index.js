@@ -9,8 +9,8 @@ const seedAll = async () => {
     await seedUser();
     console.log("=================");
 
-    // await seedLibraries();
-    // console.log("==================");
+    await seedLibrary();
+    console.log("==================");
 
     process.exit(0);
 };

@@ -1,0 +1,22 @@
+<section class="post-edit col-md-6">
+{{> post-info post}}
+
+{{#if loggedIn}}
+<form class="comment-form single-post">
+  <div class="form-group">
+    <textarea name="comment-body" class="form-control"></textarea>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-info text-white">add comment</button>
+    <button type="button" class="upvote-btn btn btn-info text-white">upvote</button>
+  </div>
+</form>
+{{/if}}
+
+{{> comments post.comments}}
+</section>
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/upvote.js"></script>
+{{/if}}
