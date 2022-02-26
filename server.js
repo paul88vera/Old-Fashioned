@@ -19,24 +19,16 @@ const sess = {
   })
 };
 
-// app.use(session(sess));
+app.use(session(sess));
 
 const helpers = require('./utils/helpers');
 
-const hbs = exphbs.create({});
-
-
+const hbs = exphbs.create({ helpers });
 
 const { engine } = require("express-handlebars");
 
 app.set("view engine", "handlebars");
 
-app.engine(
-  "handlebars",
-  engine({
-    layoutsDir: `${__dirname}/views/layouts`,
-  })
-);
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 

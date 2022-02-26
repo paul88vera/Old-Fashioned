@@ -1,17 +1,17 @@
 const User = require('./User');
-const Drinks = require('./Drinks');
+// const Drinks = require('./Drinks');
 // const Comment = require('./Comment');
 
 
 // create associations
-User.hasMany(Drinks, {
-    foreignKey: 'user_id'
-});
+// User.hasMany(Drinks, {
+//     foreignKey: 'user_id'
+// });
 
-Drinks.belongsTo(User, {
-    foreignKey: 'user_id',
-    onDelete: 'SET NULL'
-});
+// Drinks.belongsTo(User, {
+//     foreignKey: 'user_id',
+//     onDelete: 'SET NULL'
+// });
 
 // User.belongsToMany(Drinks, {
 //     foreignKey: 'user_id',
@@ -19,8 +19,6 @@ Drinks.belongsTo(User, {
 // });
 
 // Drinks.belongsToMany(User, {
-//     through: Comment,
-//     as: "drinks_id",
 //     foreignKey: 'drinks_id',
 //     onDelete: 'SET NULL'
 // });
@@ -35,4 +33,4 @@ Drinks.belongsTo(User, {
 //     onDelete: 'SET NULL'
 // });
 
-module.exports = { User, Drinks };
+module.exports = { User };
