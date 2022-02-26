@@ -1,12 +1,27 @@
 const router = require("express").Router();
-const { Post, User } = require("../../models");
+// const sequelize = require("../../config/connection");
+const { Drinks, User, Comment} = require("../../models");
+const withAuth = require("../../utils/auth");
 
+// get all users
 router.get("/", (req, res) => {
-  console.log("=========");
-  Post.findAll({
-    attributes: ["id", "ingredients", "title", "post_id", "created_at"],
-    order: [["created_at", "DESC"]],
+  console.log("======================");
+  Drinks.findAll({
+    attributes: [
+      "id",
+      "ingredients",
+      "title",
+      "created_at"
+    ],
     include: [
+      {
+        model: Comment,
+        attributes: ["id", "comment_text", "drinks_id", "user_id", "created_at"],
+        include: {
+          model: User,
+          attributes: ["username"],
+        },
+      },
       {
         model: User,
         attributes: ["username"],
@@ -21,12 +36,25 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-  Post.findOne({
+  Drinks.findOne({
     where: {
       id: req.params.id,
     },
-    attributes: ["id", "ingredients", "title", "post_id", "created_at"],
+    attributes: [
+      "id",
+      "ingredients",
+      "title",
+      "created_at"
+    ],
     include: [
+      {
+        model: Comment,
+        attributes: ["id", "comment_text", "drinks_id", "user_id", "created_at"],
+        include: {
+          model: User,
+          attributes: ["username"],
+        },
+      },
       {
         model: User,
         attributes: ["username"],
@@ -46,12 +74,12 @@ router.get("/:id", (req, res) => {
     });
 });
 
-router.post("/", (req, res) => {
-  // expects {title: 'Taskmaster goes public!', ingredients: 'https://taskmaster.com/press', user_id: 1}
+router.post("/", withAuth, (req, res) => {
+  // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
   Post.create({
     title: req.body.title,
     ingredients: req.body.ingredients,
-    user_id: req.body.user_id,
+    user_id: req.session.user_id,
   })
     .then((dbPostData) => res.json(dbPostData))
     .catch((err) => {
@@ -60,7 +88,7 @@ router.post("/", (req, res) => {
     });
 });
 
-router.put("/:id", (req, res) => {
+router.put("/:id", withAuth, (req, res) => {
   Post.update(
     {
       title: req.body.title,
@@ -84,8 +112,9 @@ router.put("/:id", (req, res) => {
     });
 });
 
-router.delete("/:id", (req, res) => {
-  Post.destroy({
+router.delete("/:id", withAuth, (req, res) => {
+  console.log("id", req.params.id);
+  Drinks.destroy({
     where: {
       id: req.params.id,
     },
