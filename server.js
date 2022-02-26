@@ -7,13 +7,13 @@ const { engine } = require("express-handlebars");
 app.set("view engine", "handlebars");
 
 app.engine("handlebars", engine({
-  layoutsDir: `${__dirname}/views/layouts`
+  layoutsDir: `${__dirname}/views/`
 }));
 
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.render("main", {layout: 'index'});
+  res.render("main", {layout: 'login'});
 });
 
 app.listen(port, () => {
