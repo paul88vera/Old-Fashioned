@@ -1,18 +1,22 @@
-const seedLibrary = require("./postlibrary-seeds");
-const seedUser = require("./user-seeds");
+// const seedUsers = require("./user-seeds");
+// const seedDrinks = require("./drinks-seeds");
+// const seedComments = require("./comment-seeds");
 
-const sequelize = require("../config/connection");
+// const sequelize = require("../config/connection");
 
-const seedAll = async () => {
-    await sequelize.sync({ force: true });
-    console.log("=================");
-    await seedUser();
-    console.log("=================");
+// const seedAll = async () => {
+//   await sequelize.sync({ force: true });
+//   console.log("--------------");
+//   await seedUsers();
+//   console.log("--------------");
 
-    await seedLibrary();
-    console.log("==================");
+//   await seedDrinks();
+//   console.log("--------------");
 
-    process.exit(0);
-};
+//   await seedComments();
+//   console.log("--------------");
 
-seedAll();
+//   process.exit(0);
+// };
+
+// seedAll();

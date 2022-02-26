@@ -1,0 +1,28 @@
+<header>
+  <nav class="nav-main">
+    <a class="Old-Fashioned" href="/">Old-Fashioned | Bar</a>
+    {{#if loggedIn}}
+      <a href="/logout">logout</a>
+    {{else}}
+      <a href="/login">login</a>
+    {{/if}}
+  </nav>
+</header>
+
+<div class="container" align="center">
+  <div class="modal-content">
+    <h5 class="modal-title">Choose an Option</h5>
+    <div class="modal-body">
+      <a href="/gin" class="btn btn-outline-dark ginBtn">Gin</a>
+      <a href="/vodka" class="btn btn-outline-dark VodkaBtn">Vodka</a>
+      <a href="/bourbon" class="btn btn-outline-dark BourbonBtn">Bourbon</a>
+      <a href="/tequila" class="btn btn-outline-dark TequilaBtn">Tequila</a>
+      <br />
+      <a href="/create" class="btn btn-outline-dark createBtn">Create your
+        own drink</a>
+    </div>
+  </div>
+</div>
+{{#if loggedIn}}
+  <script src="../public/javascript/logout.js"></script>
+{{/if}}
