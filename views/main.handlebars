@@ -16,7 +16,11 @@
     <header>
       <nav class="nav">
         <a class="Old-Fashioned" href="/">Old-Fashioned | Bar</a>
-        <a href="/login">Login</a>
+        {{#if loggedIn}}
+          <a href="/logout">logout</a>
+        {{else}}
+          <a href="/login">login</a>
+        {{/if}}
       </nav>
     </header>
 
@@ -34,6 +38,8 @@
         </div>
       </div>
     </div>
-
+    {{#if loggedIn}}
+      <script src="../public/javascript/logout.js"></script>
+    {{/if}}
   </body>
 </html>
