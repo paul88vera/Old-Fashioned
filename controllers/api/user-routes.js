@@ -135,6 +135,35 @@ router.put("/:id", (req, res) => {
         });
 });
 
+router.post('/login', (req,res) => {
+    User.findOne({
+        where: {
+            email: req.body.email
+        }
+    })
+    .then(dbUserData => {
+        if (!dbUserData) {
+            res.status(404).json({ message: "No user found with this id" });
+            return;
+        }
+        const validPass = dbUserData.checkPassword(req.body.password);
+        if(!validPass) {
+            res.status(404).json({ message: "No user found with this id" });
+            return;
+        }
+        req.session.save(() => {
+            req.session.id = dbUserData.id;
+            req.session.username = dbUserData.username;
+            req.session.loggedIn = true;
+
+            res.json({
+                User: dbUserData,
+                message: "It's five o'clock somewhere!"
+            })
+        });
+    })
+});
+
 router.delete("/:id", (req, res) => {
     User.destroy({
         where: {

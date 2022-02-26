@@ -2,40 +2,7 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
 // create our Post model
-class Drinks extends Model {
-    // static comment(body, models){
-    //   return models.Comment.create({
-    //     user_id: body.user_id,
-    //     drinks_id: body.drinks_id,
-    //   }).then(() => {
-    //   return Drinks.findOne({
-    //     where: {
-    //       id: body.drinks_id,
-    //     },
-    //     attributes: [
-    //       "id",
-    //       "ingredients",
-    //       "title",
-    //       "created_at",
-    //     ],
-    //     include: 
-    //       {
-    //         model: models.Comment,
-    //         attributes: [
-    //           "id",
-    //           "comment_text",
-    //           "drinks_id",
-    //           "user_id",
-    //           "created_at",
-    //         ],
-    //         include: {
-    //           model: models.User,
-    //           attributes: ["username"],
-    //         },
-    //       },
-    //   });
-    }
-
+class Drinks extends Model {}
 // create fields/columns for Post model
 Drinks.init(
   {

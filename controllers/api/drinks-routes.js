@@ -1,22 +1,22 @@
 const router = require("express").Router();
-// const sequelize = require("../../config/connection");
-const { Drinks, User, Comment} = require("../../models");
+const { Drinks, User, Comment } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // get all users
 router.get("/", (req, res) => {
   console.log("======================");
   Drinks.findAll({
-    attributes: [
-      "id",
-      "ingredients",
-      "title",
-      "created_at"
-    ],
+    attributes: ["id", "ingredients", "title", "created_at"],
     include: [
       {
         model: Comment,
-        attributes: ["id", "comment_text", "drinks_id", "user_id", "created_at"],
+        attributes: [
+          "id",
+          "comment_text",
+          "drinks_id",
+          "user_id",
+          "created_at",
+        ],
         include: {
           model: User,
           attributes: ["username"],
@@ -40,16 +40,17 @@ router.get("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-    attributes: [
-      "id",
-      "ingredients",
-      "title",
-      "created_at"
-    ],
+    attributes: ["id", "ingredients", "title", "created_at"],
     include: [
       {
         model: Comment,
-        attributes: ["id", "comment_text", "drinks_id", "user_id", "created_at"],
+        attributes: [
+          "id",
+          "comment_text",
+          "drinks_id",
+          "user_id",
+          "created_at",
+        ],
         include: {
           model: User,
           attributes: ["username"],
@@ -75,7 +76,7 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", withAuth, (req, res) => {
-  // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
+  // expects {title: 'Taskmaster goes public!', ingredients: 'https://taskmaster.com/press', user_id: 1}
   Post.create({
     title: req.body.title,
     ingredients: req.body.ingredients,

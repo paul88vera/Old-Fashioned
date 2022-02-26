@@ -19,7 +19,7 @@ const sess = {
   })
 };
 
-app.use(session(sess));
+// app.use(session(sess));
 
 const helpers = require('./utils/helpers');
 
@@ -44,10 +44,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
-// app.use(require("./controllers"));
+app.use(require("./controllers"));
 
 app.get("/", (req, res) => {
-  res.render("main", { layout: "index" });
+  res.render("home", { layout: "main" });
 });
 
 sequelize.sync({ force: false }).then(() => {
