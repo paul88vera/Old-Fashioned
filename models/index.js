@@ -28,9 +28,9 @@ Comment.belongsTo(User, {
     onDelete: 'SET NULL'
 });
 
-// Comment.belongsTo(Drinks, {
-//     foreignKey: 'drinks_id',
-//     onDelete: 'SET NULL'
-// });
+Comment.belongsTo(Drinks, {
+    foreignKey: 'drinks_id',
+    onDelete: 'SET NULL'
+});
 
 module.exports = { User };

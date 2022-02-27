@@ -1,4 +1,4 @@
-const { Drinks } = require('../models');
+const Drinks = require('../models');
 
 const drinksdata = [
   {
