@@ -18,10 +18,11 @@ Drinks.belongsTo(User, {
 //     onDelete: 'SET NULL',
 // });
 
-// Drinks.belongsToMany(User, {
-//     foreignKey: 'drinks_id',
-//     onDelete: 'SET NULL'
-// });
+Drinks.belongsToMany(User, {
+    through: Comment,
+    foreignKey: 'drinks_id',
+    onDelete: 'SET NULL'
+});
 
 Comment.belongsTo(User, {
     foreignKey: 'user_id',
@@ -33,4 +34,4 @@ Comment.belongsTo(Drinks, {
     onDelete: 'SET NULL'
 });
 
-module.exports = { User };
+module.exports = { User, Drinks, Comment };
