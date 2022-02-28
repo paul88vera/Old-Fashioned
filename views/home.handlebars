@@ -1,22 +1,22 @@
 <header>
   <nav class="nav-main">
-    <a class="Old-Fashioned align-middle" href="/">Old-Fashioned | Bar</a>
+    <a class="Old-Fashioned" href="/home">Old-Fashioned | Bar </a>
     {{#if loggedIn}}
-      <a href="/logout" class="btn">logout</a>
+      <a href="/logout">logout</a>
     {{else}}
-      <a href="/login" class="btn btn-outline-secondary">login</a>
+      <a class="login" href="/login">Login</a>
     {{/if}}
   </nav>
 </header>
 
-<div class="modal-container d-flex col-md-9" align="center">
+<div class="modal-container d-flex justify-content-center" align="center">
   <div class="modal-content">
     <h5 class="modal-title">Choose an Option</h5>
     <div class="modal-body">
-      <a href="/gin" class="btn ginBtn">Gin</a>
-      <a href="/vodka" class="btn vodkaBtn">Vodka</a>
-      <a href="/bourbon" class="btn bourbonBtn">Bourbon</a>
-      <a href="/tequila" class="btn tequilaBtn">Tequila</a>
+      <a href="/create/gin" class="btn ginBtn">Gin</a>
+      <a href="/create/vodka" class="btn vodkaBtn">Vodka</a>
+      <a href="/create/bourbon" class="btn bourbonBtn">Bourbon</a>
+      <a href="/create/tequila" class="btn tequilaBtn">Tequila</a>
       <br />
       <a href="/create" class="btn createBtn">Create your
         own drink</a>
