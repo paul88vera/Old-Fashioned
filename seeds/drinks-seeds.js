@@ -3,7 +3,7 @@ const Drinks = require('../models');
 const drinksdata = [
   {
     title: 'Juicy',
-    ingredients: 'Watermelon, surgar',
+    ingredients: 'Watermelon, sugar',
     user_id: 1
   }
 ];
