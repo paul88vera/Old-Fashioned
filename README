@@ -1,0 +1,48 @@
+# Old-Fashioned
+
+## Description
+
+Old-Fashioned is a guide with a pre-existing library of drink recipes enjoyed around the world. In addition to the library, you can create your own drink profiles to share with others. Get to mixing! Don't drink and drive, and drink responsibly.
+
+## Table Of Contents
+
+    Installation
+    Usage
+    Languages
+    Licenses
+    Contributed
+    Demo
+    Questions/Contact Us
+    
+## Installation
+##Usage
+
+Old fashioned is a great way to keep track of your favorite alcochol drinks while also giving you the power to try new ones from different people with different flavors and styles.
+
+##Languages
+    Javascript
+    CSS
+    Handlebars
+    HTML
+    Express
+    Bcrypt
+    dotenv
+    express-handlebars
+    mysql2
+    nodemon
+    path 
+    sequelize
+
+## Licenses
+
+None
+
+## Contributed
+    Paul Vera
+    Teresa Cabell
+    Blake Tucker
+    Sem Tristan
+
+## Demo
+
+## Questions/Contact Us
