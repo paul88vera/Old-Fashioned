@@ -45,7 +45,7 @@ None
 
 # Demo
 
-![screenshot](/images/Screen Shot 2022-02-28 at 20.41.48.png)
+![screenshot](/public/stylesheets/images/Old-Fashioned-Demo.webm)
 
 # Questions/Contact Us
 
