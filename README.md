@@ -14,7 +14,8 @@ Old-Fashioned is a guide with a pre-existing library of drink recipes enjoyed ar
     Questions/Contact Us
 
 # Installation
-Deployed with Heroku: 'damp-temple-66157.herokuapp.com/'
+
+https://damp-temple-66157.herokuapp.com/
 
 # Usage
 Old-fashioned gives you the option to store all your favorite drinks in one place while allowing you to access them anywhere. The website itself is easy to use with our user friendly interface, while also allowing you to comment, post, create, and upload pictures of new drinks to the community. Drink responsibly and enjoy. Cheers! 
@@ -43,14 +44,8 @@ None
     Sem Tristan
 
 # Demo
-'./images/Screen Shot 2022-02-28 at 20.41.48.png
-'./images/Screen Shot 2022-02-28 at 20.41.58.png
-'./images/Screen Shot 2022-02-28 at 20.42.15.png
-'./images/Screen Shot 2022-02-28 at 20.42.20.png
-'./images/Screen Shot 2022-02-28 at 20.42.29.png
-'./images/Screen Shot 2022-02-28 at 20.42.36.png
 
-'./images/Untitled_ Feb 28, 2022 8_41 PM.webm
+![screenshot](/images/Screen Shot 2022-02-28 at 20.41.48.png)
 
 # Questions/Contact Us
 
