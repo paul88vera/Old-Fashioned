@@ -1,0 +1,32 @@
+<nav>
+    <a class="Old-Fashioned" href="/home">Old-Fashioned | Bar </a>
+    <a href="/create/gin" class="ginBtn">Gin</a>
+    <a href="/create/vodka" class="VodkaBtn">Vodka</a>
+    <a href="/create/bourbon" class="BourbonBtn">Bourbon</a>
+    <a href="/create/tequila" class="TequilaBtn">Tequila</a>
+</nav>
+
+<div class="container">
+    <div class="modal" id="barModal"></div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Drink Ingredients</h5>
+            </div>
+            {{>ingredients}}
+        </div>
+    </div>
+</div>
+
+{{#if drink-info.length}}
+<section>
+    <h2>Your Drinks</h2>
+        <ul>
+            {{#each drink-info as |drink|}}
+            <li>
+                {{>drink-info drink}}
+            </li>
+            {{/each}}
+        </ul>
+</section>
+{{/if}}
