@@ -7,6 +7,9 @@ router.get("/", (req, res) => {
   console.log("======================");
   Drinks.findAll({
     attributes: ["id", "ingredients", "title", "created_at"],
+    ///////////////////////////
+    //// for comment build ////
+    ///////////////////////////
     // include: [
     //   {
     //     model: Comment,
@@ -41,6 +44,9 @@ router.get("/:id", (req, res) => {
       id: req.params.id,
     },
     attributes: ["id", "ingredients", "title", "created_at"],
+    ///////////////////////////
+    //// for comment build ////
+    ///////////////////////////
     // include: [
     //   {
     //     model: Comment,
@@ -76,7 +82,6 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", withAuth, (req, res) => {
-  // expects {title: 'Taskmaster goes public!', ingredients: 'https://taskmaster.com/press', user_id: 1}
   Drinks.create({
     title: req.body.title,
     ingredients: req.body.ingredients,
