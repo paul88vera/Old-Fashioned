@@ -10,6 +10,8 @@ body {
 }
 
 .nav-main {
+  display: flex;
+  flex-direction: column;
   background-color: #140D07;
   font-family: 'Roboto', sans-serif;
   color: #ECE9D7;
@@ -45,6 +47,8 @@ body {
 }
 
 nav {
+  display: flex;
+  flex-direction: column;
   background-color: #140D07;
   font-family: 'Roboto', sans-serif;
   color: #ECE9D7;
@@ -64,13 +68,17 @@ nav {
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
   color: inherit;
-  padding: 1em;
+  margin: 1em;
+}
+nav>a:hover {
+  color: #140D07;
+  background-color: #ECE9D7;
 }
 
 .modal-content {
   background-color: rgb(20, 13, 7, .95);
   font-family: 'Roboto', sans-serif;
-  width: 60%;
+  /* width: 60%; */
   margin: 3em auto auto auto;
   height: auto;
   padding: 1em;
@@ -89,7 +97,7 @@ nav {
 .btn:hover {
   cursor: pointer;
   background-color: #140D07;
-  box-shadow: 0 0.4rem .8rem 0 #ece9d7;
+  box-shadow: 0 0.2rem .6rem 0 #ece9d7;
   color: #ece9d7;
   border-color: #ece9d7;
  } 
@@ -103,7 +111,10 @@ nav {
 .container {
   padding: 50px;
 }
-
+.d-flex {
+  display: flex;
+  flex-direction: column;
+}
 .modal-title {
   background-color: #140D07;
   font-family: 'Roboto', sans-serif;
@@ -116,7 +127,9 @@ nav {
   font-size: 25px;
   color: #ECE9D7;
   margin: 3em auto 1em auto;
-  width: 30%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: 1em;
   border: rgba(235, 232, 213, 0.50) 1px solid;
 }
@@ -135,4 +148,13 @@ nav {
   background-color: rgba(19, 12, 7, 0.95);
   border: rgba(235, 232, 213, 0.50) 1px solid;
   color: #ECE9D7;
+}
+@media only screen and (min-width: 768px) {
+  .nav-main, nav {
+    flex-direction: row;
+    padding: .2em;
+  }
+  .d-flex {
+    flex-direction: row;
+  }
 }
